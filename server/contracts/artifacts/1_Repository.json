@@ -1,0 +1,138 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "repositoryId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
+				"name": "addAuthorizedUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "repositoryName",
+						"type": "string"
+					}
+				],
+				"name": "addRepository",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllRepository",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "repositoryId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
+				"name": "isAuthorized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "repositoryId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
+				"name": "removeAuthorizedUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/1_Repository.sol": "RepositoryAccess"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/1_Repository.sol": {
+			"keccak256": "0x86df4ae7a2fb91fba11e432c6dab4f295fb62d244a3b7f94e679b50ecef9686a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://03461926f50f7f22cf4bc043cd92b0e99f8bfceef561fd641c0a0d61c6a26c3f",
+				"dweb:/ipfs/QmaAPAq18t41TLaLTifA7xZ7v9P6JqidQSh8BhFxYCgoxU"
+			]
+		}
+	},
+	"version": 1
+}
