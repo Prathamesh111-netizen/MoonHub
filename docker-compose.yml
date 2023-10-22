@@ -1,0 +1,43 @@
+version: '3.7'
+
+services:
+  servermoonhub:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: servermoonhub
+    container_name: servermoonhub
+    command: npm start
+    volumes:
+      - ./servermoonhub/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    networks:
+      - networkmoonhub
+  clientmoonhub:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: clientmoonhub
+    container_name: clientmoonhub
+    command: npm run dev
+    volumes:
+      - ./clientmoonhub/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - servermoonhub
+    ports:
+      - "5173:5173"
+    networks:
+      - networkmoonhub
+
+networks:
+    networkmoonhub:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
